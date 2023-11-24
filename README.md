@@ -38,7 +38,7 @@ The Stock Management System serves as a solid foundation for future enhancements
 DevDynamos expresses gratitude to NSBM University for providing the learning environment and resources necessary for the successful completion of this project. Special thanks to Prabhash Wijerathna for guidance and mentorship throughout the development process.
 
 *In conclusion, the Stock Management System by DevDynamos exemplifies the capabilities of budding software developers and reflects their commitment to delivering high-quality solutions that address real-world challenges in inventory management<p align="center">
-  ![image](https://github.com/PrabhaWijera/StockWise_Solution/assets/106425954/0cbbae55-b64c-4c45-8037-2933bae43eed)
+ 
 
 </p>
 
