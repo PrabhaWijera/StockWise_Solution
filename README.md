@@ -1,23 +1,4 @@
-<!-- Add a CSS style block at the beginning of your README.md -->
-
-<style>
-  h1 {
-    color: #0366d6; /* Set header color */
-    border-bottom: 2px solid #e1e4e8; /* Add a bottom border */
-    padding-bottom: 0.3em; /* Adjust spacing */
-  }
-
-  h2 {
-    color: #0366d6; /* Set header color */
-  }
-
-  p {
-    font-size: 16px; /* Set font size for paragraphs */
-    line-height: 1.6; /* Set line height for better readability */
-  }
-
-  /* Add more styles as needed */
-</style>
+ 
 
 # StockWise_Solution
 ## Project Title: Stock Management System
