@@ -17,10 +17,11 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        URL resource = AppInitializer.class.getResource("");
+        URL resource = AppInitializer.class.getResource("/view/LoginForm.fxml");
         primaryStage.setScene(new Scene(FXMLLoader.load(resource)));
-        primaryStage.setTitle("D24 - Hostel.");
-        primaryStage.setMaximized(true);
+        primaryStage.setTitle("StockWise");
+
+        primaryStage.setFullScreen(true);
         primaryStage.show();
     }
 }
