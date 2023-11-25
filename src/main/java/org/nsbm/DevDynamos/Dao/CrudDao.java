@@ -2,25 +2,22 @@ package org.nsbm.DevDynamos.Dao;
 
 import org.nsbm.DevDynamos.Dao.exception.ConstraintViolationException;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface CrudDao <T extends Serializable,ID extends Serializable> extends SuperDao{
+public interface CrudDao  <Entity,ID>extends SuperDao {
 
-    T save(T entity) throws ConstraintViolationException, SQLException,ClassNotFoundException;
+    boolean save(Entity entity) throws Exception;
 
-    boolean update(T entity) throws ConstraintViolationException, SQLException,ClassNotFoundException;
+    boolean update(Entity entity) throws Exception;
 
-    boolean deleteByPk(String pk)throws ConstraintViolationException, SQLException,ClassNotFoundException;
+    boolean delete(ID id) throws Exception;
 
-    List<T> findAll();
+    List<Entity> getAll() throws IOException;
 
-    T findByPk(ID pk) throws SQLException,ClassNotFoundException;
-
-    boolean existByPk(String pk);
-
-    long count();
+    String generateId() throws Exception;
 
 
 

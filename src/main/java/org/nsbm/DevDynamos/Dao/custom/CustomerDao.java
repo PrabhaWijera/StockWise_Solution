@@ -1,4 +1,7 @@
 package org.nsbm.DevDynamos.Dao.custom;
 
-public interface CustomerDao {
+import org.nsbm.DevDynamos.Dao.CrudDao;
+import org.nsbm.DevDynamos.Entity.CustomerEntity;
+
+public interface CustomerDao extends CrudDao<CustomerEntity,String> {
 }

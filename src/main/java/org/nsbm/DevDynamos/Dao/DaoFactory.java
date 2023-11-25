@@ -14,26 +14,26 @@ public class DaoFactory {
 
     }
     public static  DaoFactory getInstance(){
-        return daoFactory==null?(daoFactory=new DaoFactory()): daoFactory;
+        return daoFactory==null? new DaoFactory():daoFactory;
     }
 
-    public <T extends SuperDao>T getDAO(Connection connection,DaoTypes daoTypes){
+    public Object getDAO( DaoTypes daoTypes){
         switch (daoTypes){
             //give connections
             case CUSTOMER:
-                return (T) new CustomerDaoimpl(connection);
+                return   new CustomerDaoimpl( );
 
             case ITEM:
-                return (T) new ItemDaoimpl(connection);
+                return  new ItemDaoimpl( );
 
             case ORDER:
-                return (T) new OrdersDaoimpl(connection);
+                return  new OrdersDaoimpl( );
 
             case EMPLOYEE:
-                return (T) new EmployeeDaoimpl(connection);
+                return   new EmployeeDaoimpl( );
 
             case SUPPLIERS:
-                return (T) new SupplyerDaoimpl(connection);
+                return   new SupplyerDaoimpl( );
 
             default:
                return null;

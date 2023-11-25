@@ -1,7 +1,5 @@
 package org.nsbm.DevDynamos.Db;
 
-import org.nsbm.DevDynamos.Dao.util.DButil;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;

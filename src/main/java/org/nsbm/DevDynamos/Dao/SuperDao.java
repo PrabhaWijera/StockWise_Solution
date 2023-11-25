@@ -1,4 +1,6 @@
 package org.nsbm.DevDynamos.Dao;
 
-public interface SuperDao {
+import java.io.Serializable;
+
+public interface SuperDao extends Serializable {
 }
