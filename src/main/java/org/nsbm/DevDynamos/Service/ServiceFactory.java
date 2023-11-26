@@ -16,10 +16,10 @@ public class ServiceFactory {
 
 
 
-    public SuperService getBO(ServiceType types) {
+    public <T extends SuperService> T   getBO(ServiceType types) {
         switch (types) {
             case CUSTOMER:
-                return new CustomerServiceimpl();
+                return (T)new CustomerServiceimpl();
 
             default:
                 return null;
