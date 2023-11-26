@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import org.nsbm.DevDynamos.Util.Navigation;
@@ -14,7 +15,7 @@ import org.nsbm.DevDynamos.Util.Routes;
 import java.io.IOException;
 
 public class LoginController {
-    public BorderPane brdrPaneLogin;
+    public AnchorPane brdrPaneLogin;
     public Pane paneLogin;
     public Pane innerLoginPane;
     public JFXPasswordField pswdPassword;

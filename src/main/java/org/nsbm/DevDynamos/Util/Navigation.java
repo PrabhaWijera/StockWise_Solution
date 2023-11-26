@@ -3,6 +3,7 @@ package org.nsbm.DevDynamos.Util;
 import animatefx.animation.FadeIn;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -10,10 +11,10 @@ import java.io.IOException;
 
 public class Navigation {
 
-    private static BorderPane pane;
+    private static AnchorPane pane;
 
 
-    public static void navigate(Routes routes, BorderPane pane) throws IOException {
+    public static void navigate(Routes routes, AnchorPane pane) throws IOException {
         new FadeIn(pane).play();
         Navigation.pane=pane;
         Navigation.pane.getChildren().clear();

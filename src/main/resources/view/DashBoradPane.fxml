@@ -2,9 +2,15 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 
 <AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.nsbm.DevDynamos.Controllers.DashBoard">
-   <children>
-      <JFXButton fx:id="go" layoutX="200.0" layoutY="307.0" onAction="#goOnAction" text="Go" />
-   </children>
+
+      <Pane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="go" layoutX="243.0" layoutY="169.0" mnemonicParsing="false" onAction="#goOnAction" prefHeight="31.0" prefWidth="94.0" text="Go" textFill="WHITE" />
+         </children>
+      </Pane>
+
 </AnchorPane>

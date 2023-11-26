@@ -7,17 +7,21 @@ import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface CrudDao  <Entity,ID>extends SuperDao {
+public interface CrudDao  <T extends Serializable,ID extends Serializable> extends SuperDao{
 
-    boolean save(Entity entity) throws Exception;
+    T save(T entity) throws ConstraintViolationException, SQLException, ClassNotFoundException;
 
-    boolean update(Entity entity) throws Exception;
+    boolean update(T entity) throws ConstraintViolationException, SQLException, ClassNotFoundException;
 
-    boolean delete(ID id) throws Exception;
+    boolean deleteByPk(String pk) throws ConstraintViolationException, SQLException, ClassNotFoundException;
 
-    List<Entity> getAll() throws IOException;
+    List<T> findAll() ;
 
-    String generateId() throws Exception;
+    T findByPk(ID pk) throws SQLException, ClassNotFoundException;
+
+    boolean existByPk(String pk) ;
+
+    long count() ;
 
 
 

@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -12,7 +13,7 @@ import javax.persistence.Id;
 @Getter
 @ToString
 @Entity
-public class CustomerEntity {
+public class CustomerEntity implements Serializable {
 
     @Id
     private String id;
