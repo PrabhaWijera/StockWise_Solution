@@ -31,6 +31,25 @@ public class CustomerController {
 
 
     public void AddOnAction(ActionEvent actionEvent) {
+       String id= IdTxt.getText();
+       String name=nameTxt.getText();
+       String address=addressTxt.getText();
+       String nic=nicTxt.getText();
+       int contactNumber= Integer.parseInt(contactNumberTxt.getText());
+
+       CustomerDto customerDto=new CustomerDto(id,name,address,nic,contactNumber);
+       CustomerServiceimpl css= (CustomerServiceimpl) ServiceFactory.getBOFactory().getBO(ServiceType.CUSTOMER);
+
+        try {
+            customerService.save(customerDto);
+        if (css!=null){
+            new Alert(Alert.AlertType.CONFIRMATION,"Customer Add ").show();
+        }else {
+            new Alert(Alert.AlertType.ERROR," Customer Not Add").show();
+        }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
