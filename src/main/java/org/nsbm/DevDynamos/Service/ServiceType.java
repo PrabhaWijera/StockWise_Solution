@@ -1,4 +1,6 @@
 package org.nsbm.DevDynamos.Service;
 
-public class ServiceType {
+public enum ServiceType {
+
+    LOG ,CUSTOMER
 }

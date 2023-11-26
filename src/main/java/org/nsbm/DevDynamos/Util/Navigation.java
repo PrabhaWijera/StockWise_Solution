@@ -3,7 +3,6 @@ package org.nsbm.DevDynamos.Util;
 import animatefx.animation.FadeIn;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -26,6 +25,10 @@ public class Navigation {
                 window.setTitle("MainDashBoard");
                 initUI("DashBoradPane.fxml");
                 break;
+
+            case CUSTOMER:
+                window.setTitle("Customer Window");
+                initUI("CustomerFrom.fxml");
 
             default:
                 new Alert(Alert.AlertType.ERROR,"UI NOT FOUND!!! ").show();
