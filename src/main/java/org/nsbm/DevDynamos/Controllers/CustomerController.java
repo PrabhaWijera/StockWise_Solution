@@ -11,6 +11,7 @@ import org.nsbm.DevDynamos.Service.ServiceType;
 import org.nsbm.DevDynamos.Service.custom.CustomerService;
 import org.nsbm.DevDynamos.Service.custom.impl.CustomerServiceimpl;
 
+import javax.persistence.Id;
 import java.sql.SQLException;
 import java.util.Objects;
 
@@ -31,26 +32,30 @@ public class CustomerController {
 
 
     public void AddOnAction(ActionEvent actionEvent) {
-       String id= IdTxt.getText();
-       String name=nameTxt.getText();
-       String address=addressTxt.getText();
-       String nic=nicTxt.getText();
-       int contactNumber= Integer.parseInt(contactNumberTxt.getText());
+        String id=IdTxt.getText();
+        String name=nameTxt.getText();
+        String address=addressTxt.getText();
+        String nic=nicTxt.getText();
+        int concatNumber= Integer.parseInt(nicTxt.getText());
 
-       CustomerDto customerDto=new CustomerDto(id,name,address,nic,contactNumber);
-       CustomerServiceimpl css= (CustomerServiceimpl) ServiceFactory.getBOFactory().getBO(ServiceType.CUSTOMER);
+        CustomerDto customerDto=new CustomerDto(id,name,address,nic,concatNumber);
+        CustomerServiceimpl customerServiceimpl= (CustomerServiceimpl) ServiceFactory.getBOFactory().getBO(ServiceType.CUSTOMER);
 
         try {
             customerService.save(customerDto);
-        if (css!=null){
-            new Alert(Alert.AlertType.CONFIRMATION,"Customer Add ").show();
-        }else {
-            new Alert(Alert.AlertType.ERROR," Customer Not Add").show();
-        }
+            if (customerServiceimpl!=null){
+                new Alert(Alert.AlertType.CONFIRMATION,"Customer Add").show();
+            }else {
+                new Alert(Alert.AlertType.ERROR,"No Add").show();
+            }
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
+        IdTxt.clear();
+        nameTxt.clear();
+        addressTxt.clear();
+        nicTxt.clear();
+        contactNumberTxt.clear();
     }
 
 
